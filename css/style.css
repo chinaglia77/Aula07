@@ -1,0 +1,149 @@
+/* Importa os ícones do Bootstrap Icons por meio de um CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+/* Define a fonte personalizada 'Inter' a partir de um arquivo local */
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+/* Aplica configurações básicas para todos os elementos */
+* {
+    margin: 0; /* Remove margens padrão */
+    font-family: "Inter"; /* Aplica a fonte personalizada */
+}
+
+/* Estiliza a barra de navegação no cabeçalho */
+.cabecalho nav {
+    display: flex; /* Usa layout flexível */
+    justify-content: space-around; /* Espaça os itens igualmente ao redor */
+    background-color: #f2f2f2; /* Cor de fundo cinza-claro */
+    padding: 5px;
+    align-items: center; /* Alinha itens verticalmente */
+    height: 70px; /* Altura da barra de navegação */
+}
+
+/* Estiliza o título dentro da navegação */
+.navegacao h1 {
+    font-size: 18px;
+    font-weight: 900; /* Peso da fonte bem forte */
+}
+
+/* 
+Seleciona diretamente uma lista (<ul>) que seja filha imediata de .navegacao.
+Remove marcadores e exibe os itens lado a lado.
+*/
+.navegacao > ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Exibe os itens lado a lado */
+}
+
+/* 
+Seleciona todas as âncoras (<a>) dentro de um <ul> que seja filho direto de .navegacao.
+Aplica estilo básico aos links.
+*/
+.navegacao > ul a {
+    text-decoration: none; /* Remove sublinhado */
+    color: #000; /* Cor preta para o texto do link */
+    margin: 1px; /* Margem ao redor dos links */
+}
+
+/* 
+Aplica margem e padding específicos aos links dentro da lista com classe .menu-principal.
+*/
+.menu-principal > li a {
+    margin: 7px;
+    padding: 5px;
+}
+
+/* 
+Aplica efeitos visuais quando o mouse passa sobre os links.
+Fundo escuro, texto claro e bordas arredondadas.
+*/
+.menu-principal > li a:hover {
+    transition: 0.5s; 
+    background-color: #1e1e1e; 
+    color: #f2f2f2; 
+    border-radius: 5px; 
+}
+
+/* 
+Estiliza ícones dentro de qualquer <ul> filho direto de .navegacao.
+Define tamanho e espaçamento interno.
+*/
+.navegacao > ul i {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* 
+Aplica estilo especial ao ícone dentro do item de link ativo.
+Fundo escuro, texto claro, cantos arredondados.
+*/
+.link-ativo i {
+    background-color: #000;
+    color: #f2f2f2;
+    border-radius: 5px;
+}
+
+/* 
+Estiliza a seção .banner.
+Ocupa toda a altura da tela e define cor de fundo (usada se não houver imagem).
+*/
+.banner {
+    height: 100vh; 
+}
+
+/* 
+Ajusta a imagem de fundo do banner para cobrir toda a seção.
+Evita distorções com object-fit: cover.
+*/
+.banner > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Mantém proporção cobrindo todo o espaço */
+}
+
+/* 
+Estiliza a seção de produtos.
+Também ocupa toda a altura da tela.
+*/
+.produtos {
+    height: 100vh;
+}
+
+/* 
+Estiliza o título principal da seção de produtos.
+Com padding e centralização.
+*/
+.produtos > h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 
+Cria um layout em grade com 4 colunas e 2 linhas de 300px cada.
+Espaçamento lateral com padding.
+*/
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+    grid-template-rows: repeat(2, 300px); /* 2 linhas de altura fixa */
+    padding: 20px 10% 5px 10%;
+    padding-top: 20px;
+}
+
+/* 
+Estiliza cada item da grade de produtos.
+Define tamanho fixo, cor de fundo, alinhamento, bordas arredondadas e centralização.
+*/
+.box {
+    height: 280px;
+    width: 200px;
+    background-color: tomato;
+    text-align: center;
+    align-content: center; /* Alinha conteúdo verticalmente */
+    border-radius: 15px;
+    margin: auto; /* Centraliza a box na célula da grid */
+}
